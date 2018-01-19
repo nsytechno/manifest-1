@@ -2,7 +2,7 @@
 <manifest>
 
   <!-- Manifest -->
-  <project path="manifest" name="manifest" remote="thunder" />
+  <project path="platform_manifest" name="manifest" remote="lepopris" />
 
   <!-- Build -->
   <project path="build/make" name="build" remote="thunder" >
@@ -26,7 +26,7 @@
   <project path="development" name="development" groups="pdk-cw-fs,pdk-fs" remote="thunder" />
 
   <!--Device &&  Sepolicy -->
-  <project path="device/thunder/sepolicy" name="device_thunder_sepolicy" remote="thunder" />
+  <project path="device/leporis/sepolicy" name="device_leporis_sepolicy" remote="thunder" />
   <project path="device/qcom/common" name="device_qcom_common" remote="thunder" />
   <project path="device/qcom/sepolicy" name="device_qcom_sepolicy" remote="thunder" />
 
@@ -57,25 +57,25 @@
   <project path="frameworks/opt/telephony" name="frameworks_opt_telephony" groups="pdk" remote="thunder" />
 
   <!-- Hardware -->
-  <project path="hardware/thunder/interfaces" name="hardware_thunder_interfaces" remote="thunder" >
+  <project path="hardware/leporis/interfaces" name="hardware_leporis_interfaces" remote="leporis" >
       <copyfile dest="hardware/thunder/Android.bp" src="Android.bp"/>
   </project>
-  <project path="hardware/broadcom/libbt" name="hardware_broadcom_libbt" groups="pdk" remote="thunder" />
-  <project path="hardware/interfaces" name="hardware_interfaces" groups="pdk" remote="thunder" />
-  <project path="hardware/libhardware" name="hardware_libhardware" remote="thunder" />
-  <project path="hardware/libhardware_legacy" name="hardware_libhardware_legacy" groups="pdk" remote="thunder" />
-  <project path="hardware/qcom/bootctrl" name="hardware_qcom_bootctrl" groups="pdk" remote="thunder" />
-  <project path="hardware/qcom/bt" name="hardware_qcom_bt" groups="qcom" remote="thunder" />
-  <project path="hardware/qcom/bt-caf" name="hardware_qcom_bt" groups="qcom" remote="thunder" revision="storm-8.1-caf" />
-  <project path="hardware/qcom/camera" name="hardware_qcom_camera" groups="qcom_camera" remote="thunder" />
-  <project path="hardware/qcom/fm" name="hardware_qcom_fm" remote="thunder" />
-  <project path="hardware/qcom/gps" name="hardware_qcom_gps" groups="qcom,qcom_gps" remote="thunder" />
-  <project path="hardware/qcom/keymaster" name="hardware_qcom_keymaster" groups="qcom,qcom_keymaster,pdk" remote="thunder" />
-  <project path="hardware/qcom/power" name="hardware_qcom_power" groups="qcom,pdk" remote="thunder" />
-  <project path="hardware/qcom/wlan" name="hardware_qcom_wlan" groups="qcom" remote="thunder" revision="storm-8.1" />
-  <project path="hardware/qcom/wlan-caf" name="hardware_qcom_wlan" groups="qcom" remote="thunder" revision="storm-8.1-caf" />
+  <project path="hardware/broadcom/libbt" name="hardware_broadcom_libbt" groups="pdk" remote="gzosp" />
+  <project path="hardware/interfaces" name="hardware_interfaces" groups="pdk" remote="gzosp" />
+  <project path="hardware/libhardware" name="hardware_libhardware" remote="gzosp" />
+  <project path="hardware/libhardware_legacy" name="hardware_libhardware_legacy" groups="pdk" remote="gzosp" />
+  <project path="hardware/qcom/bootctrl" name="hardware_qcom_bootctrl" groups="pdk" remote="gzosp" />
+  <project path="hardware/qcom/bt" name="hardware_qcom_bt" groups="qcom" remote="gzosp" />
+  <project path="hardware/qcom/bt-caf" name="hardware_qcom_bt" groups="qcom" remote="gzosp" revision="8.1-caf" />
+  <project path="hardware/qcom/camera" name="hardware_qcom_camera" groups="qcom_camera" remote="gzosp" />
+  <project path="hardware/qcom/fm" name="hardware_qcom_fm" remote="gzosp" />
+  <project path="hardware/qcom/gps" name="hardware_qcom_gps" groups="qcom,qcom_gps" remote="gzosp" />
+  <project path="hardware/qcom/keymaster" name="hardware_qcom_keymaster" groups="qcom,qcom_keymaster,pdk" remote="gzosp" />
+  <project path="hardware/qcom/power" name="hardware_qcom_power" groups="qcom,pdk" remote="gzosp" />
+  <project path="hardware/qcom/wlan" name="hardware_qcom_wlan" groups="qcom" remote="gzosp" revision="8.1" />
+  <project path="hardware/qcom/wlan-caf" name="hardware_qcom_wlan" groups="qcom" remote="gzosp" revision="8.1-caf" />
   <project path="hardware/ril" name="hardware_ril" groups="pdk" remote="thunder" />
-  <project path="hardware/ril-caf" name="hardware_ril" groups="pdk" remote="gzosp" revision="storm-8.1-caf" />
+  <project path="hardware/ril-caf" name="hardware_ril" groups="pdk" remote="gzosp" revision="8.1-caf" />
 
   <!-- Packages -->
   <project path="packages/apps/Bluetooth" name="packages_apps_Bluetooth" groups="pdk-cw-fs,pdk-fs" remote="thunder" />
@@ -108,16 +108,12 @@
   <project path="system/sepolicy" name="system_sepolicy" groups="pdk" remote="thunder" />
   <project path="system/vold" name="system_vold" groups="pdk" remote="thunder" />
   <project path="system/qcom" name="system_qcom" groups="pdk" remote="thunder" />
-
-  <!-- ThunderWaves -->
-  <project path="packages/apps/Thunderwaves" name="packages_apps_ThunderWaves" remote="thunder" />
-
+  
   <!-- Vendors -->
-  <project path="vendor/thunder" name="vendor_thunder" remote="thunder" />
-  <project path="vendor/codeaurora/telephony" name="vendor_codeaurora_telephony" remote="thunder" />
-  <project path="vendor/qcom/opensource/cryptfs_hw" name="vendor_qcom_opensource_cryptfs_hw" remote="thundee" />
-  <project path="vendor/qcom/opensource/dataservices" name="vendor_qcom_opensource_dataservices" remote="thunder" />
-  <project path="vendor/qcom/opensource/interfaces" name="vendor_qcom_opensource_interfaces" remote="thunder" >
+  <project path="vendor/codeaurora/telephony" name="vendor_codeaurora_telephony" remote="gzosp" />
+  <project path="vendor/qcom/opensource/cryptfs_hw" name="vendor_qcom_opensource_cryptfs_hw" remote="gzosp" />
+  <project path="vendor/qcom/opensource/dataservices" name="vendor_qcom_opensource_dataservices" remote="gzosp" />
+  <project path="vendor/qcom/opensource/interfaces" name="vendor_qcom_opensource_interfaces" remote="gzosp" >
     <copyfile dest="vendor/qcom/opensource/Android.bp" src="os_pickup.bp"/>
   </project>
 
