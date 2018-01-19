@@ -2,19 +2,24 @@
 <manifest>
 
   <remote  name="aosp"
-           fetch="https://android.googlesource.com/"
-           review="https://android-review.googlesource.com/" />
-  <default revision="refs/tags/android-8.1.0_r7"
-           remote="aosp"
-           sync-j="4"
-           sync-c="true" />
+           fetch="https://android.googlesource.com"
+           review="https://android-review.googlesource.com/"
+	         revision="refs/tags/android-8.1.0_r7" />
+
+  <remote name="gzosp"
+          fetch="https://github.com/GZOSP"
+          revision="refs/heads/8.1" />
+
+  <default remote="aosp"
+           sync-c="true"
+           sync-j="4" />
 
   <remote  name="github"
            fetch="https://github.com/" />
 
-  <remote  name="thunder"
-           fetch="https://github.com/ThunderOS"
-           revision="storm-8.1" />
+  <remote  name="leporis"
+           fetch="https://github.com/LeporisOS"
+           revision="refs/heads/oreo-mr1" />
 
   <project path="build/make" name="platform/build" groups="pdk" >
     <copyfile src="core/root.mk" dest="Makefile" />
@@ -633,7 +638,10 @@
   <!-- Remove this repos -->
   <include name="snippets/remove.xml" />
 
-  <!-- Thunder repos -->
-  <include name="snippets/thunder.xml" />
+  <!-- Leporis repos -->
+  <include name="snippets/leporis.xml" />
+  
+  <!-- HALS -->
+  <include name="manifests/hals.xml" />
 
 </manifest>
